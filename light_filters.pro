@@ -16,7 +16,7 @@ LIBS += \
     /Volumes/ZENO_2016/projects/qt_zoic_old/Arnold-4.2.14.3-darwin/bin/libai.dylib \
 
 SOURCES += \
-    /Volumes/ZENO_2016/projects/arnoldLightFilters/src/lightcolorattenuation.cpp
+    /Volumes/ZENO_2016/projects/arnoldLightFilters/src/lightColorAttenuation.cpp
 
 HEADERS += \
 
