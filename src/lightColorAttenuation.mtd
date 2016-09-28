@@ -1,8 +1,8 @@
-# lightColorAttenuation               0x00070155
+# lightColorAttenuation                    0x0011CD40
 [node lightColorAttenuation]
     desc                    STRING "Light filter providing control over color attenuation"
     maya.name               STRING  "lightColorAttenuation"
-    maya.id                 INT     0x00070155
+    maya.id                 INT     0x0011CD40
     maya.classification     STRING "light/filter"
     maya.lights             STRING "pointLight spotLight areaLight aiAreaLight directionalLight"
 
