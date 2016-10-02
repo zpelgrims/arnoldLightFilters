@@ -1,11 +1,23 @@
 #include <ai.h>
 #include <strings.h>
 
+/*
+
 #define _colorStart                 (params[0].RGB)
 #define _colorEnd                   (params[1].RGB)
 #define _interpolationMethod        (params[2].BOOL)
 #define _attenuationStart           (params[3].FLT)
 #define _attenuationEnd             (params[4].FLT)
+
+*/
+
+enum lightColorAttenuationParams {
+   p_colorStart,
+   p_colorEnd,
+   p_interpolationMethod,
+   p_attenuationStart,
+   p_attenuationEnd
+};
 
 // IDEAS
 // saturation
@@ -31,19 +43,24 @@ node_finish {}
 
 shader_evaluate {
     // get values
-    const AtParamValue* params = AiNodeGetParams(node);
+    AtColor colorStart = AiShaderEvalParamRGB(p_colorStart);
+    AtColor colorEnd = AiShaderEvalParamRGB(p_colorEnd);
+    bool interpolationMethod = AiShaderEvalParamBool(p_interpolationMethod);
+    float attenuationStart = AiShaderEvalParamFlt(p_attenuationStart);
+    float attenuationEnd = AiShaderEvalParamFlt(p_attenuationEnd);
 
-    if (sg->Ldist < _attenuationStart){
-        sg->Liu *= _colorStart;
-    } else if (sg->Ldist > _attenuationEnd){
-        sg->Liu *= _colorEnd;
+
+    if (sg->Ldist < attenuationStart){
+        sg->Liu *= colorStart;
+    } else if (sg->Ldist > attenuationEnd){
+        sg->Liu *= colorEnd;
     } else {
        // calculate how far the shading point is in respect to the distance between attenuation start and attenuation end
-       double percentage = ((sg->Ldist - _attenuationStart) / (_attenuationEnd - _attenuationStart));
-       if (_interpolationMethod == 0){
-            sg->Liu *= AiColorLerp(percentage, _colorStart, _colorEnd);
-       } else if (_interpolationMethod == 1){
-            sg->Liu *= AiColorHerp(percentage, _colorStart, _colorEnd);
+       double percentage = ((sg->Ldist - attenuationStart) / (attenuationEnd - attenuationStart + 0.001)); //avoiding division by 0
+       if (interpolationMethod == 0){
+            sg->Liu *= AiColorLerp(percentage, colorStart, colorEnd);
+       } else if (interpolationMethod == 1){
+            sg->Liu *= AiColorHerp(percentage, colorStart, colorEnd);
        }
     }
 }

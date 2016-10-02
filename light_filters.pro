@@ -21,5 +21,5 @@ SOURCES += \
 HEADERS += \
 
 DISTFILES += \
-    /Volumes/ZENO_2016/projects/arnoldLightFilters/src/lightColorAttenuation.mtd \
+    /Volumes/ZENO_2016/projects/arnoldLightFilters/bin/lightColorAttenuation.mtd \
     /Volumes/ZENO_2016/projects/arnoldLightFilters/ae/aiLightColorAttenuationTemplate.py
