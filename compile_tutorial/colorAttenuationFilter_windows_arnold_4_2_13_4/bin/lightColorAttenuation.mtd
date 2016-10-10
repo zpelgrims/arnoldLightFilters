@@ -1,0 +1,28 @@
+# lightColorAttenuation               0x00070155
+[node lightColorAttenuation]
+    desc                    STRING "Light filter providing control over color attenuation"
+    maya.name               STRING  "lightColorAttenuation"
+    maya.id                 INT     0x00070155
+    maya.classification     STRING "light/filter"
+    maya.lights             STRING "pointLight spotLight areaLight aiAreaLight directionalLight"
+ 
+    [attr colorStart]
+    maya.name               STRING  "aiColorStart"
+    default                 RGB     1.0 1.0 1.0
+ 
+    [attr colorEnd]
+    maya.name               STRING  "aiColorEnd"
+    default                 RGB     1.0 1.0 1.0
+ 
+ 
+    [attr attenuationStart]
+    maya.name               STRING  "aiAttenuationStart"
+    softmin                 FLOAT   0.001
+    softmax                 FLOAT   999.0
+    default                 FLOAT   0.001
+ 
+    [attr attenuationEnd]
+    maya.name               STRING  "aiAttenuationEnd"
+    softmin                 FLOAT   0.001
+    softmax                 FLOAT   999.0
+    default                 FLOAT   0.001
