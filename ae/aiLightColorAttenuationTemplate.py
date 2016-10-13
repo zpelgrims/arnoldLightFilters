@@ -33,12 +33,15 @@ class AEaiLightColorAttenuationTemplate(ShaderAETemplate):
 
         self.addControl("aiRampX", label="Ramp X Axis")
         self.addControl("aiFlipRampX", label="Flip X Axis")
+        self.addControl("aiDoubleRamp_x", label="Ramp on both sides")
 
         self.addControl("aiRampY", label="Ramp Y Axis")
         self.addControl("aiFlipRampY", label="Flip Y Axis")
+        self.addControl("aiDoubleRamp_y", label="Ramp on both sides")
 
         self.addControl("aiRampZ", label="Ramp Z Axis")
         self.addControl("aiFlipRampZ", label="Flip Z Axis")
+        self.addControl("aiDoubleRamp_z", label="Ramp on both sides")
 
 
         self.endLayout()

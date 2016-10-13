@@ -1,95 +1,108 @@
 [node lightColorAttenuation]
-    desc STRING "Light filter providing control over color attenuation"
-    maya.name               STRING  "lightColorAttenuation"
-    maya.id                 INT     0x00070015
-    maya.classification     STRING "light/filter"
-    maya.lights             STRING "pointLight spotLight areaLight aiAreaLight directionalLight mesh aiPhotometricLight"
-    maya.swatch             BOOL    False
+        desc STRING "Light filter providing control over color attenuation"
+        maya.name               STRING  "lightColorAttenuation"
+        maya.id                 INT     0x00070015
+        maya.classification     STRING "light/filter"
+        maya.lights             STRING "pointLight spotLight areaLight aiAreaLight directionalLight mesh aiPhotometricLight"
+        maya.swatch             BOOL    False
 
-    [attr mode]
-    maya.name STRING  "aiMode"
-    default BOOL    False
+        [attr mode]
+            maya.name               STRING  "aiMode"
+            default                 BOOL    False
 
-    [attr colorStart]
-    maya.name STRING  "aiColorStart"
-    default RGB     1.0 1.0 1.0
+        [attr colorStart]
+            maya.name               STRING  "aiColorStart"
+            default                 RGB     1.0 1.0 1.0
 
-    [attr colorEnd]
-    maya.name                                                      STRING  "aiColorEnd"
-    default                                                                RGB     1.0 1.0 1.0
+        [attr colorEnd]
+            maya.name               STRING  "aiColorEnd"
+            default                 RGB     1.0 1.0 1.0
 
-    [attr interpolationMethod]
-    maya.name                                                      STRING  "aiInterpolationMethod"
-    default                 BOOL   False
+        [attr interpolationMethod]
+            maya.name               STRING  "aiInterpolationMethod"
+            default                 BOOL   False
 
-    [attr attenuationStart]
-    maya.name                                                      STRING  "aiAttenuationStart"
-    softmin                                                                              FLOAT   0.001
-    softmax                                                                             FLOAT   100.0
-    default                                                                FLOAT   0.0
+        [attr attenuationStart]
+            maya.name               STRING  "aiAttenuationStart"
+            softmin                 FLOAT   0.001
+            softmax                 FLOAT   100.0
+            default                 FLOAT   0.0
 
-    [attr attenuationEnd]
-    maya.name                                       STRING  "aiAttenuationEnd"
-    softmin                                                                              FLOAT   0.001
-    softmax                                                                             FLOAT   100.0
-    default                                                                FLOAT   10.0
+        [attr attenuationEnd]
+            maya.name               STRING  "aiAttenuationEnd"
+            softmin                 FLOAT   0.001
+            softmax                 FLOAT   100.0
+            default                 FLOAT   10.0
 
-    [attr geo]
-    maya.name                       STRING  "aiGeo"
-    default                 BOOL    False
+        [attr geo]
+            maya.name               STRING  "aiGeo"
+            default                 BOOL    False
 
-    [attr math]
-    maya.name                       STRING  "aiMath"
-    default                 BOOL    False
+        [attr math]
+            maya.name               STRING  "aiMath"
+            default                 BOOL    False
 
-    [attr locatorLocation]
-    maya.name                                       STRING  "aiLocatorLocation"
-    default                                                                POINT   0.0 0.0 0.0
+        [attr locatorLocation]
+            maya.name               STRING  "aiLocatorLocation"
+            default                 POINT   0.0 0.0 0.0
 
-    [attr scale]
-    maya.name                                       STRING  "aiScale"
-    default                                                                POINT   1.0 1.0 1.0
+        [attr scale]
+            maya.name               STRING  "aiScale"
+            default                 POINT   1.0 1.0 1.0
 
-    [attr sphereRadius]
-    maya.name                                       STRING  "aiSphereRadius"
-    default                                                                FLOAT   1.0
+        [attr sphereRadius]
+            maya.name               STRING  "aiSphereRadius"
+            default                 FLOAT   1.0
 
-    [attr colorAttenuation]
-    maya.name                       STRING  "aiColorAttenuation"
-    default                                                                RGB     1 1 1
+        [attr colorAttenuation]
+            maya.name               STRING  "aiColorAttenuation"
+            default                 RGB     1 1 1
 
-    [attr colorDensity]
-    maya.name                                       STRING  "aiColorDensity"
-    softmin                                                                              FLOAT   0
-    softmax                                                                             FLOAT   1
-    default                                                                FLOAT   1.0
+        [attr colorDensity]
+            maya.name               STRING  "aiColorDensity"
+            softmin                 FLOAT   0
+            softmax                 FLOAT   1
+            default                 FLOAT   1.0
 
-    [attr rampX]
-    maya.name                                       STRING  "aiRampX"
-    softmin                                                                              FLOAT   0.0
-    softmax                                                                             FLOAT   1.0
-    default                                                                FLOAT   0.0
+        [attr rampX]
+            maya.name               STRING  "aiRampX"
+            softmin                 FLOAT   0.0
+            softmax                 FLOAT   1.0
+            default                 FLOAT   0.0
 
-    [attr flipRampX]
-    maya.name                       STRING  "aiFlipRampX"
-    default                 BOOL    False
+        [attr flipRampX]
+            maya.name               STRING  "aiFlipRampX"
+            default                 BOOL    False
 
-    [attr rampY]
-    maya.name                                       STRING  "aiRampY"
-    softmin                                                                              FLOAT   0.0
-    softmax                                                                             FLOAT   1.0
-    default                                                                FLOAT   0.0
 
-    [attr flipRampY]
-    maya.name                       STRING  "aiFlipRampY"
-    default                 BOOL    False
+        [attr doubleRamp_x]
+            maya.name               STRING  "aiDoubleRamp_x"
+            default                 BOOL    False
 
-    [attr rampZ]
-    maya.name                                       STRING  "aiRampZ"
-    softmin                                                                              FLOAT   0.0
-    softmax                                                                             FLOAT   1.0
-    default                                                                FLOAT   0.0
+        [attr rampY]
+            maya.name               STRING  "aiRampY"
+            softmin                 FLOAT   0.0
+            softmax                 FLOAT   1.0
+            default                 FLOAT   0.0
 
-    [attr flipRampZ]
-    maya.name                       STRING  "aiFlipRampZ"
-    default                 BOOL    False
+        [attr flipRampY]
+            maya.name               STRING  "aiFlipRampY"
+            default                 BOOL    False
+
+        [attr doubleRamp_y]
+            maya.name               STRING  "aiDoubleRamp_y"
+            default                 BOOL    False
+
+        [attr rampZ]
+            maya.name               STRING  "aiRampZ"
+            softmin                 FLOAT   0.0
+            softmax                 FLOAT   1.0
+            default                 FLOAT   0.0
+
+        [attr flipRampZ]
+            maya.name               STRING  "aiFlipRampZ"
+            default                 BOOL    False
+
+        [attr doubleRamp_z]
+            maya.name               STRING  "aiDoubleRamp_z"
+            default                 BOOL    False
